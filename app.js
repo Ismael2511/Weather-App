@@ -3,6 +3,7 @@
 // let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 const weatherCont = document.querySelector('.weather-cont');
+const btn = document.getElementById('btn_submit');
 const curDate = new Date();
 
 const api = {
@@ -60,10 +61,14 @@ const setDate = (obj) => {
     return {date,obj}
 }
 
+
 const renderWeather = (dataObj) => {
-    console.log(dataObj)
     const {lat,lon} = dataObj.obj.obj.data.coord
-    if(dataObj.obj.obj.data.wind.gust === undefined) dataObj.obj.obj.data.wind.gust = 'Not Defined'
+    if(dataObj.obj.obj.data.wind.gust === undefined) dataObj.obj.obj.data.wind.gust = 'Not Defined';
+
+    // 1. Remove Existing HTML
+    console.log(weatherCont.children) 
+    // 2. Render HTML
     const html = `
         <div class="weather--state">
             <h2 class="text-secondary fnt-sBold">${(dataObj.obj.obj.data.name).toUpperCase()} <span class="fnt-regular text-muted">${lat}, ${lon}</span></h2>
@@ -109,6 +114,14 @@ const renderWeather = (dataObj) => {
     weatherCont.insertAdjacentHTML('beforeend',html)
 }
 
-
-
 (() => searchWeather())();
+
+btn.addEventListener('click', () => {
+    const inpState = document.getElementById('state');
+
+    if(!inpState.value){
+        
+    };
+    searchWeather(inpState.value)
+})
+

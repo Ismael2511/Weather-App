@@ -91,6 +91,11 @@ label,p{ font-size: 1.8em; }
     
     transition: background 250ms ease-in;
 }
+.btn:focus{
+    outline: none;
+    border: 2px solid #17b173;
+    box-shadow: 0 0 2px 1px #0f7c50ad;
+}
 
 /** WEATHER STATS SECTION */
 
