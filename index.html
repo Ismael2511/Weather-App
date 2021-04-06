@@ -21,7 +21,7 @@
     <section class="section _search-state">
         <div class="container">
             <label for="searchState" class="text-secondary fnt-sBold">Search State: </label>
-            <input type="text" id="state" class="input-field" />
+            <input type="text" id="inp_search" class="input-field" />
 
             <button type="submit" id="btn_submit" class="btn btn-submit fnt-regular">
                 <span>
@@ -35,46 +35,46 @@
     <section class="section _weather-stats">
         <div class="container">
             <div class="weather-cont">
-                <!-- <div class="weather--state">
-                    <h2 class="text-secondary fnt-sBold">{%STATE%} <span class="fnt-regular text-muted">{%LATLONG%}</span></h2>
-                    <p class="text-muted fnt-medium">{%DATE%}</p>
-                    <p class="text-muted fnt-medium">{%TIME%}</p>
+                <div class="weather--state">
+                    <h2 class="text-secondary fnt-sBold" id="state">{%STATE%}</h2> <label class="fnt-regular text-muted" id="coords">{%LATLONG%}</label>
+                    <p class="text-muted fnt-medium" id="date">{%DATE%}</p>
+                    <p class="text-muted fnt-medium" id="time">{%TIME%}</p>
                 </div>
 
                 <div class="weather--temp">
-                    <h1 class="fnt-sBold text-secondary">{%TP%}</h1>
-                    <p class="text-muted fnt-medium">Feels Like: {%FEELS_LIKE%}</p>
+                    <h1 class="fnt-sBold text-secondary" id="temp">{%TP%}</h1>
+                    <p class="text-muted fnt-medium" id="feels_like">Feels Like: {%FEELS_LIKE%}</p>
                 </div>
 
                 <div class="weather--cont">
                     <div class="weather--block">
                         <div class="weather--status">
-                            <h2 class="text-primary fnt-sBold">{%TEMP_STATUS%}</h2>
+                            <h2 class="text-primary fnt-sBold" id="temp_status">{%TEMP_STATUS%}</h2>
                         </div>
                         <div class="weather--details">
-                            <p class="text-muted fnt-regular">Humidity: {%HUMIDITY%}</p>
-                            <p class="text-muted fnt-regular">Max Temp: {%MAX_TEMP%}</p>
-                            <p class="text-muted fnt-regular">Min Temp: {%MIN_TEMP%}</p>
-                            <p class="text-muted fnt-regular">Pressure: {%PRESSURE%}</p>                        
+                            <p class="text-muted fnt-regular" id="humidity">Humidity: {%HUMIDITY%}</p>
+                            <p class="text-muted fnt-regular" id="max_temp">Max Temp: {%MAX_TEMP%}</p>
+                            <p class="text-muted fnt-regular" id="min_temp">Min Temp: {%MIN_TEMP%}</p>
+                            <p class="text-muted fnt-regular" id="pressure">Pressure: {%PRESSURE%}</p>                        
                         </div>
                     </div>
                     <div class="weather--block">
                         <div class="img-weather">
                             <img src="./img/sunrise.svg" alt="Sunrise">
                             <span><h3 class="text-secondary fnt-medium">Sunrise</h3></span>
-                            <p class="text-muted fnt-regular">{%HOUR_SUNRISE%}</p>
+                            <p class="text-muted fnt-regular" id="sunrise">{%HOUR_SUNRISE%}</p>
                         </div>
                         <div class="img-weather">
                             <img src="./img/sunset.svg" alt="Sunset">
                             <span><h3 class="text-secondary fnt-medium">Sunset</h3></span>
-                            <p class="text-muted fnt-regular">{%HOUR_SUNSET%}</p>
+                            <p class="text-muted fnt-regular" id="sunset">{%HOUR_SUNSET%}</p>
                         </div>
                     </div>
                     <div class="weather--block">
-                        <h3 class="text-secondary fnt-medium"><span class="arrow-wind">&#8594;</span> {%WIND_SPEED%}</h3>
-                        <p class="text-muted fnt-regular">Speed: {%WIND_SPEED%}</p>
+                        <h3 class="text-secondary fnt-medium" id="clouds"><span class="arrow-wind">&#8594;</span> Clouds: {%CLOUDS%}</h3>
+                        <p class="text-muted fnt-regular" id="wind_speed">Speed: {%WIND_SPEED%}</p>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
     </section>
