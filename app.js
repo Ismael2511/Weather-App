@@ -24,7 +24,7 @@ const DOMstring = {
 
 const api = {
     base: 'https://api.openweathermap.org/data/2.5/',
-    key: 'b51463bfb1804614467a199fd650671b'
+    key: 'APIKEY'
 }
 const inpState = document.querySelector(DOMstring.inpSearch);
 const weatherCont = document.querySelector(DOMstring.weatherCont);
